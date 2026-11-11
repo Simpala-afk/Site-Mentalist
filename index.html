@@ -90,6 +90,27 @@
                 </div>
             </section>
 
+            <!-- БЛОК ЧТЕНИЯ МЫСЛЕЙ (НА РОДНЫХ СТИЛЯХ САЙТА) -->
+            <section class="seasons reveal" id="mind" aria-labelledby="mind-title" style="margin-bottom: 3rem;">
+                <p class="type-line">Эксперимент менталиста</p>
+                <h2 class="toc-title" id="mind-title">Джейн читает мысли. Попробуй сам</h2>
+                <p style="margin-bottom: 1.5rem;">Четыре шага, подсказок не будет. Он назовёт число в твоей голове раньше, чем ты дойдёшь до конца.</p>
+
+                <div class="season-panel">
+                    <p class="type-line" id="jane-count">Шаг 1 из 4</p>
+                    <p id="jane-step" aria-live="polite" style="font-size: 1.2rem; margin: 0.8rem 0 1.2rem;">Задумай любое число от 1 до 9.</p>
+                    
+                    <div class="actions">
+                        <button class="btn btn-red" type="button" id="jane-btn">Задумал</button>
+                    </div>
+
+                    <details id="jane-secret" hidden style="margin-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1rem;">
+                        <summary style="cursor: pointer; font-weight: 500;">Как это работает</summary>
+                        <p style="margin-top: 0.75rem; opacity: 0.85;">Любое число из таблицы умножения на 9 (до 81) в сумме цифр даёт 9: 18 → 1+8, 63 → 6+3. Девять минус пять — всегда четыре. Никакого чтения мыслей, только арифметика, и именно так работают многие трюки менталистов.</p>
+                    </details>
+                </div>
+            </section>
+
             <section class="seasons reveal">
                 <p class="type-line">Хронология дела</p>
                 <h2 class="toc-title">Семь сезонов — семь лет охоты</h2>
@@ -161,5 +182,38 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+        (function() {
+            const steps = [
+                { count: "Шаг 1 из 4", text: "Задумай любое число от 1 до 9.", btn: "Задумал", secret: false },
+                { count: "Шаг 2 из 4", text: "Умножь его на 9.", btn: "Готово", secret: false },
+                { count: "Шаг 3 из 4", text: "Если получилось двузначное число, сложи его цифры.", btn: "Готово", secret: false },
+                { count: "Шаг 4 из 4", text: "Вычти 5.", btn: "Готово", secret: false },
+                { count: "Результат", text: "В твоей голове число 4.", btn: "Сыграть ещё раз", secret: true }
+            ];
+
+            let current = 0;
+            const countEl = document.getElementById('jane-count');
+            const stepEl = document.getElementById('jane-step');
+            const btnEl = document.getElementById('jane-btn');
+            const secretEl = document.getElementById('jane-secret');
+
+            if (btnEl) {
+                btnEl.addEventListener('click', function() {
+                    current = (current + 1) % steps.length;
+                    countEl.textContent = steps[current].count;
+                    stepEl.textContent = steps[current].text;
+                    btnEl.textContent = steps[current].btn;
+                    
+                    if (steps[current].secret) {
+                        secretEl.removeAttribute('hidden');
+                    } else {
+                        secretEl.setAttribute('hidden', '');
+                        secretEl.removeAttribute('open');
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
