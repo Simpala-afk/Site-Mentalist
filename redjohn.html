@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Кровавый Джон — главный антагонист сериала «Менталист». Засекреченные материалы дела № RJ-2008.">
+    <meta name="theme-color" content="#0d0b09">
+    <title>Кровавый Джон - Менталист</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ccircle cx='32' cy='30' r='20' fill='none' stroke='%23c8102e' stroke-width='5'/%3E%3Cpath d='M22 36q10 9 20 0' fill='none' stroke='%23c8102e' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='26' r='3' fill='%23c8102e'/%3E%3Ccircle cx='40' cy='26' r='3' fill='%23c8102e'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,500&family=Golos+Text:wght@400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Дополнительные стили для видео рядом с текстом -->
+    <style>
+        .evidence-gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; /* Чтобы на мобильных экранах они встали друг под другом */
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .evidence-gallery .figure {
+            flex: 1 1 300px;
+            margin: 0;
+            max-width: 400px;
+        }
+        .evidence-gallery video {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <div class="flash" aria-hidden="true"></div>
+
+    <div class="wanted-strip" aria-hidden="true">
+        <div class="wanted-track">
+            <span>Внимание всем постам КБР · Разыскивается Кровавый Джон · Вооружён, крайне опасен · При обнаружении не приближаться — сообщить в ближайшее отделение · Дело № RJ-2008 · </span>
+            <span>Внимание всем постам КБР · Разыскивается Кровавый Джон · Вооружён, крайне опасен · При обнаружении не приближаться — сообщить в ближайшее отделение · Дело № RJ-2008 · </span>
+        </div>
+    </div>
+
+    <header class="header-block">
+        <div class="wrap">
+            <a class="brand" href="index.html">
+                <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="30" r="20" fill="none" stroke="#c8102e" stroke-width="5"/><path d="M22 36q10 9 20 0" fill="none" stroke="#c8102e" stroke-width="5" stroke-linecap="round"/><circle cx="24" cy="26" r="3" fill="#c8102e"/><circle cx="40" cy="26" r="3" fill="#c8102e"/></svg>
+                Менталист<span>The Mentalist</span>
+            </a>
+            <nav class="nav-menu" aria-label="Разделы сайта">
+                <a href="index.html">Сюжет</a>
+                <a href="director.html">Создатель</a>
+                <a href="actors.html">Актеры</a>
+                <a href="filming.html">Съемки</a>
+                <a href="awards.html">Награды</a>
+                <a href="facts.html">Факты</a>
+                <a href="redjohn.html" aria-current="page">Кровавый Джон</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="wrap">
+            <div class="page-title reveal">
+                <p class="type-line">Объект № 1 · Степень опасности: максимальная</p>
+                <h1>Ужас Калифорнии: Кровавый Джон</h1>
+            </div>
+
+            <section class="gate reveal" data-gate>
+                <svg class="smiley" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="draw" cx="60" cy="56" r="38" fill="none" stroke="#c8102e" stroke-width="5"/>
+                    <path class="draw draw-mouth" d="M42 64 Q60 82 78 64" fill="none" stroke="#c8102e" stroke-width="5" stroke-linecap="round"/>
+                    <circle class="draw-dot" cx="47" cy="48" r="4.5" fill="#c8102e"/>
+                    <circle class="draw-dot" cx="73" cy="48" r="4.5" fill="#c8102e"/>
+                </svg>
+                <p class="type-line">Дело № RJ-2008 · Гриф: секретно</p>
+                <h2>Материалы засекречены</h2>
+                <p>Дальнейшие материалы содержат подробности трагедии, изменившей жизнь Патрика Джейна. Печать может сорвать только тот, кто готов.</p>
+                <button type="button" class="btn btn-red" data-open-case>Сорвать печать</button>
+            </section>
+
+            <div class="classified is-hidden" data-classified>
+                <section class="dossier reveal">
+                    <span class="stamp stamp-float">Раскрыто</span>
+                    <div class="split">
+                        <p>Кровавый Джон (Red John) — неуловимый серийный убийца и главный антагонист первых шести сезонов сериала. Хладнокровный, расчетливый манипулятор, который создал целую сеть последователей внутри правоохранительных органов.</p>
+                        
+                        <div class="evidence-gallery">
+                            <figure class="figure evidence">
+                                <span class="tape tape-left" aria-hidden="true"></span>
+                                <!-- Вставляем видео с запиской -->
+                                <video src="redjohn-note.mp4" controls preload="metadata"></video>
+                                <figcaption class="caption">Видеоматериал: Записка от Кровавого Джона.</figcaption>
+                            </figure>
+
+                            <figure class="figure evidence">
+                                <span class="tape tape-right" aria-hidden="true"></span>
+                                <img src="redjohn.jpg" alt="Смайл Кровавого Джона, нарисованный кровью" width="274" height="372">
+                                <figcaption class="caption">Улика № 7 — знак, снятый со стены.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="red-john-card">
+                        <h3>Трагедия Патрика Джейна</h3>
+                        <p>До работы в полиции Патрик был популярным медиумом-шарлатаном. Выступая на национальном телевидении, он решил подогреть интерес к своей персоне и публично составил фальшивый психологический профиль Кровавого Джона, назвав его <em>«уродливым, жалким маленьким человеком»</em>.</p>
+                        <p>Серийный убийца не простил оскорбления. В тот же вечер, вернувшись домой, Патрик обнаружил на двери спальни записку, а внутри — фирменный знак маньяка, нарисованный кровью на стене. Кровавый Джон убил его жену Анджелу и маленькую дочь Шарлотту, чтобы наказать Джейна за гордыню. Эта ночь навсегда изменила Патрика и заставила его посвятить свою жизнь поимке убийцы.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p class="footer-note">Фан-сайт сериала «Менталист» · CBS, 2008–2015 · Дело закрыто</p>
+            <nav class="footer-nav" aria-label="Разделы сайта в подвале">
+                <a href="index.html">Сюжет</a>
+                <a href="director.html">Создатель</a>
+                <a href="actors.html">Актеры</a>
+                <a href="filming.html">Съемки</a>
+                <a href="awards.html">Награды</a>
+                <a href="facts.html">Факты</a>
+                <a href="redjohn.html">Кровавый Джон</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
